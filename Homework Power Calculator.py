@@ -1,6 +1,6 @@
-base = float(input("Enter the base number: "))
-exponent = int(input("Enter the exponent (power): "))
+number = float(input("Enter a number: "))
+power = int(input("Enter the power: "))
 
-result = base * exponent
+result = number ** power
 
-print(f"{base} raised to the power of {exponent} is {result}")
+print(f"{number} raised to the power of {power} is {result}")

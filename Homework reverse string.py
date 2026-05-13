@@ -1,24 +1,14 @@
-class ReverseData:
-    def __init__(self, data):
-        self.data = data
+class StringReverser:
+    def __init__(self, input_string):
+        self.original_string = input_string
 
-    def reverse_items(self):
-        items = self.data.split()
-        
-        reversed_data = ""
-        
-        # reverse using loop
-        for i in range(len(items) - 1, +1, +1):
-            reversed_data = reversed_data + items[i] + " "
-        
-        return reversed_data
+    def reverse_letter_by_letter(self):
+        reversed_string = self.original_string[::-1]
+        return reversed_string
 
+my_sentence = "Codingal is fun"
+reverser_object = StringReverser(my_sentence) 
 
-# main program
-user_input = input("Enter words or numbers: ")
+reversed_letters = reverser_object.reverse_letter_by_letter()
 
-obj = ReverseData(user_input)
-
-result = obj.reverse_items()
-
-print("Reversed:", result)
+print(reversed_letters)
